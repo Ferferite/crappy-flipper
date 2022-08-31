@@ -1,7 +1,7 @@
 # crappy-flipper
 flipper zero inspired device running on an esp32
 
-#Wiring
+# Wiring
 Display:
 SCL --->D22
 SDA --->D21
