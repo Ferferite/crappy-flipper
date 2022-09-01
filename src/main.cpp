@@ -10,7 +10,8 @@ void save_card(){
   lcd.clear();
   lcd.setCursor(0,1);
   lcd.print("     Card Saved");
-  writeFile(SD, "/card.txt", "card_uid_string");
+  const char * c = card_uid_string.c_str();
+  writeFile(SD, "/card.txt", c);
   delay(1000);
   PN532_Menu(0);
 }
@@ -85,6 +86,5 @@ void loop() {
     selected_item = 0;
   }
   else{;} //dont remove or it aint going to work
-  delay(200);
-  //Serial.println(current_menu);
+  delay(100);
 }

@@ -12,9 +12,8 @@
 #define MISO  (27)
 #define SCK   (14)
 
-
+SPIClass spi = SPIClass(HSPI);
 void SD_init(){
-  SPIClass spi = SPIClass(HSPI);
   spi.begin(SCK, MISO, MOSI, CS);
   if (!SD.begin(CS,spi,80000000)) {
     Serial.println("Card Mount Failed");
@@ -26,7 +25,7 @@ void SD_init(){
     Serial.println("No SD card attached");
     return;
   }
-
+  Serial.println(SD.begin());
   Serial.print("SD Card Type: ");
   if(cardType == CARD_MMC){
     Serial.println("MMC");

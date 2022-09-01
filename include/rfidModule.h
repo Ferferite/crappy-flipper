@@ -38,10 +38,9 @@ String read_card(){
         card_uid_string = card_uid_string + " ";
         Serial.println(String(card_uid[i], HEX));
         }
-    }
     return card_uid_string;  
+    }
 }
-
 void write_card(){
   Serial.println("Write to card");
 }

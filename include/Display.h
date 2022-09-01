@@ -49,7 +49,7 @@ void Test_Menu(){
     lcd.print("Press left to exit");
 }
 
-//TODO: fix bug when item 1 is skipped after entering the PN532 menu
+
 void PN532_Menu(int selected_item){
     lcd.clear();
     current_menu = "PN532_Menu";
