@@ -63,13 +63,14 @@ void loop() {
     }
     else if(current_menu=="PN532_Menu"){
       if(PN532_menu_items[selected_item] == "Read Card"){
-        Display_UID(read_card());
+        Display_UID(read_uid());
       }
       else if(PN532_menu_items[selected_item] == "Write to Card"){
         write_card();
       }
-      else if(PN532_menu_items[selected_item] == " "){
-        write_card();
+      else if(PN532_menu_items[selected_item] == "Dump Card"){
+        dump_card();
+        Serial.println("===========Dump card=========");
       }
       else if(PN532_menu_items[selected_item] == " "){
         write_card();

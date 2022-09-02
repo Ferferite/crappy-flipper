@@ -4,9 +4,8 @@
 #include <Wire.h>
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);  
-//define main_menu
 String main_menu_items[] = {"Test Menu", "Rfid/Nfc", "test3", "test4"};
-String PN532_menu_items[] = {"Read Card", "Write to Card", " ", " "};
+String PN532_menu_items[] = {"Read Card", "Write to Card", "Dump Card", " "};
 int i_menu = 0;
 int selected_item = 0;
 int x = 0;
