@@ -4,7 +4,7 @@
 #include <Wire.h>
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);  
-String main_menu_items[] = {"Test Menu", "Rfid/Nfc", "test3", "test4"};
+String main_menu_items[] = {"Test Menu", "Rfid/Nfc", "IR remote", "test4"};
 String PN532_menu_items[] = {"Read Card", "Write to Card", "Dump Card", " "};
 int i_menu = 0;
 int selected_item = 0;
@@ -82,4 +82,13 @@ void Display_UID(String UID){
     }
     lcd.setCursor(0,3);
     lcd.print("Press right to save");
+}
+
+void IR_Menu(){
+    current_menu = "Display_IR_Menu";
+    lcd.clear();
+    lcd.setCursor(0,0);
+    lcd.print("    IR Remote    ");
+    lcd.setCursor(0,1);
+    lcd.print("Press right to exit");
 }
